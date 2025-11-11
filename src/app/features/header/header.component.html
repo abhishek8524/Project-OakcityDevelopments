@@ -1,0 +1,19 @@
+<header class="header">
+  <div class="container flex">
+    <div class="brand">
+      <img src="assets/images/logo/OakCityLogopng.png" alt="OakCity Developments logo" class="logo">
+    </div>
+
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+   <!-- ...your existing brand/nav... -->
+
+<a class="btn call" [attr.href]="'tel:' + (content.content()?.contact?.phone || '')">CALL NOW</a>
+
+
+  </div>
+</header>

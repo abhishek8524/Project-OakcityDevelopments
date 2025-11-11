@@ -1,0 +1,29 @@
+.header{
+  background:var(--surface);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+.container.flex{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  height:80px;
+  width:auto;
+  display:block;
+  padding: 10px;
+}
+.nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:500;
+}
+.nav a:hover{
+  color:var(--accent);
+}
+.mini{font-size:.85rem; opacity:.9; padding:.25rem .5rem; border:1px solid #2a2a2a; border-radius:6px}
+.mini:hover{background:var(--accent); color:#111; border-color:var(--accent)}
+

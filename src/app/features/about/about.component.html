@@ -1,0 +1,12 @@
+<section id="about" class="section">
+  <div class="container about" *ngIf="vm() as x">
+    <div class="copy">
+      <h2>{{ x.heading }}</h2>
+      <p class="muted">{{ x.body }}</p>
+      <a href="#projects" class="btn">See Recent Work</a>
+    </div>
+    <div class="imgwrap">
+      <img [src]="x.image" alt="About image">
+    </div>
+  </div>
+</section>

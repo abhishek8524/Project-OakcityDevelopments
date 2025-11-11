@@ -1,0 +1,117 @@
+/* ---- Section shell with tunable spacers ---- */
+.trust {
+  /* Tune these 3 vars to adjust global spacing quickly */
+  --padY: clamp(14px, 2.5vw, 28px);
+  --gap: clamp(14px, 3vw, 36px);
+  --cardRadius: 10px;
+
+  background: #f4f5f7;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  padding: var(--padY) 0;
+}
+
+/* ---- Row: fixed label column + flexible logo grid ---- */
+.trust-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 240px) 1fr; /* label | logos */
+  align-items: center;
+  column-gap: var(--gap);
+  row-gap: 12px;
+}
+
+/* Label with subtle divider on desktop */
+.trust-label {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  font-size: .95rem;
+  white-space: nowrap;
+  border-right: 1px solid #e6e6e6;
+  padding-right: var(--gap);
+}
+
+/* ---- Logo area: evenly divided, responsive columns ---- */
+.trust-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--gap);
+  align-items: center;
+}
+
+/* Each logo sits in a consistent “card” so the row looks balanced */
+.logo-link {
+  display: grid;
+  place-items: center;
+  padding: 12px 14px;
+  min-height: 86px;                 /* consistent row height */
+  background: #fff;                 /* contrast against light grey section */
+  border: 1px solid #e9e9e9;
+  border-radius: var(--cardRadius);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  text-decoration: none;
+}
+
+/* Logo sizing: uniform without distortion */
+.logo-link img {
+  max-height: 46px;                 /* control perceived size */
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: brightness(1) contrast(1.05);
+}
+
+/* Hover: subtle lift */
+.logo-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,.06);
+  border-color: #dcdcdc;
+}
+.logo-link:hover img {
+  filter: brightness(1.03) contrast(1.08);
+}
+
+/* ---- Responsive tweaks ---- */
+@media (max-width: 980px) {
+  .trust-row {
+    grid-template-columns: 1fr;
+    row-gap: var(--gap);
+    text-align: center;
+  }
+  .trust-label {
+    border-right: none;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .trust-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2-up on small phones */
+    gap: clamp(12px, 3.5vw, 18px);
+  }
+  .logo-link {
+    min-height: 78px;
+  }
+  .logo-link img {
+    max-height: 40px;
+  }
+}
+
+/* (Optional) dark-theme friendly if you use CSS variables */
+@media (prefers-color-scheme: dark) {
+  .trust {
+    background: #131417;
+    border-top-color: #2a2a2a;
+    border-bottom-color: #2a2a2a;
+  }
+  .trust-label { color: #ddd; border-right-color: #2a2a2a; }
+  .logo-link {
+    background: #0f1114;
+    border-color: #1e2228;
+  }
+  .logo-link:hover {
+    border-color: #2a2f36;
+    box-shadow: 0 6px 24px rgba(0,0,0,.35);
+  }
+}

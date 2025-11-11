@@ -1,0 +1,84 @@
+<section id="contact" class="section">
+  <div class="container contact">
+    <div class="form-card">
+      <header class="header">
+        <h2>Contact Us</h2>
+        <p class="muted">Tell us about your project and we’ll get back to you shortly.</p>
+      </header>
+
+      <form [formGroup]="form" (ngSubmit)="submit()" novalidate  action="https://formspree.io/f/xrbrgkdk"
+  method="POST">
+        <label>
+          <span>Name :</span>
+          <input formControlName="name" placeholder="Your name" type="text" autocomplete="name" aria-label="Your name">
+          <small class="err" *ngIf="form.controls.name.touched && form.controls.name.invalid">
+            Name is required (min 2 chars).
+          </small>
+        </label>
+
+        <div class="two-up">
+          <label>
+            <span>Email :</span>
+            <input formControlName="email" placeholder="you@email.com" type="email" autocomplete="email" aria-label="Your email">
+            <small class="err" *ngIf="form.controls.email.touched && form.controls.email.invalid">
+              Valid email required.
+            </small>
+          </label>
+
+          <label>
+            <span>Phone :</span>
+            <input formControlName="phone" placeholder="+1 (___) ___-____" type="tel" autocomplete="tel" aria-label="Your phone">
+          </label>
+        </div>
+
+        <div class="two-up">
+          <label>
+            <span>Subject :</span>
+            <select formControlName="subject" aria-label="Subject">
+              <option value="quote">Get a Quote</option>
+              <option value="consult">Book a Consultation</option>
+              <option value="project">Discuss a Project</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+
+          <label class="pref">
+            <span>Preferred contact :</span>
+            <div class="radios">
+              <label><input type="radio" formControlName="contactPreference" value="email"> Email</label>
+              <label><input type="radio" formControlName="contactPreference" value="phone"> Phone</label>
+            </div>
+          </label>
+        </div>
+
+        <label>
+          <span>Message :</span>
+          <textarea rows="6"
+                    formControlName="message"
+                    (input)="updateCount()"
+                    maxlength="1000"
+                    placeholder="Tell us what you need..."></textarea>
+          <div class="meta-row">
+            <small class="err" *ngIf="form.controls.message.touched && form.controls.message.invalid">
+              Message is required (min 10 chars).
+            </small>
+            <small class="count">{{ msgCount() }}/1000</small>
+          </div>
+        </label>
+
+        <!-- Honeypot (hidden) -->
+        <label class="hp">
+          <span>Website :</span>
+          <input formControlName="website" type="text" tabindex="-1" autocomplete="off">
+        </label>
+
+        <button class="btn" type="submit" [disabled]="sending()">
+          {{ sending() ? 'Sending…' : 'Send Message' }}
+        </button>
+
+        <div class="alert ok" *ngIf="done()">Thanks! We’ll be in touch shortly.</div>
+        <div class="alert err" *ngIf="error()">{{ error() }}</div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+<section class="trust" *ngIf="list().length" aria-label="Certifications and memberships">
+  <div class="container trust-row">
+    <div class="trust-label">Registered & Certified</div>
+
+    <div class="trust-logos">
+      <a *ngFor="let c of list()"
+         class="logo-link"
+         [href]="c.url || '#'"
+         target="_blank"
+         rel="noopener"
+         [attr.aria-label]="c.name"
+         [attr.title]="c.name">
+        <img [src]="c.logo" [alt]="c.name">
+      </a>
+    </div>
+  </div>
+</section>

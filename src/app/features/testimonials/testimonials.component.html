@@ -1,0 +1,11 @@
+<section id="testimonials" class="section">
+  <div class="container">
+    <h2>What Clients Say</h2>
+    <div class="t-grid" *ngIf="list()?.length">
+      <div class="t-card" *ngFor="let t of list()">
+        <p class="q">“{{ t.quote }}”</p>
+        <div class="a">— {{ t.author }}</div>
+      </div>
+    </div>
+  </div>
+</section>

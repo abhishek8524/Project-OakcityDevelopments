@@ -1,0 +1,41 @@
+<section id="projects" class="section">
+  <div class="container">
+
+    <!-- Featured Carousel (only if featured exists) -->
+    <div class="featured" *ngIf="featured().length as n">
+      <div class="head">
+        <h2>Recent Projects</h2>
+        <div class="arrows">
+          <button class="btn sm" (click)="prev()">‹</button>
+          <button class="btn sm" (click)="next()">›</button>
+        </div>
+      </div>
+
+      <div class="frame" *ngIf="n">
+        <ng-container *ngIf="featured()[idx()] as f">
+          <div class="feat-card">
+            <div class="feat-images">
+              <img *ngFor="let img of f.images" [src]="img.src" [alt]="img.alt || f.title">
+            </div>
+            <div class="feat-meta">
+              <h3>{{ f.title }}</h3>
+              <div class="muted" *ngIf="f.location">{{ f.location }}</div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <!-- Masonry Grid (all projects) -->
+    <div class="masonry">
+      <div class="card" *ngFor="let p of projects()">
+        <img [src]="p.images?.[0]?.src" [alt]="p.images?.[0]?.alt || p.title">
+        <div class="meta">
+          <div class="title">{{ p.title }}</div>
+          <div class="muted" *ngIf="p.location">{{ p.location }}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,94 @@
+{
+  "nav": [
+    { "label": "Home", "href": "#home" },
+    { "label": "Services", "href": "#services" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "title": "Oak City Developments",
+    "subtitle": "Recreating Dream Homes That Last",
+    "image": "assets/images/hero-kitchen.avif"
+  },
+  "services": {
+  "ctaLabel": "Request a Quote",
+  "items": [
+    { "title": "Residential Construction", "description": "Complete home construction from design to final hand-over.", "image": "house.png" },
+    { "title": "Custom Home Builds", "description": "Tailor-made houses built from scratch to match your vision and lifestyle.", "image": "apartments.png" },
+    { "title": "Commercial Units", "description": "We build offices, plazas, and mixed-use spaces that stand the test of time.","image": "shop.png"},
+    { "title": "Project Management", "description": "End-to-end planning, scheduling, and site supervision for seamless delivery.","image": "management.png" }
+  ],
+  "valueProps": [
+    { "title": "Licensed", "subtitle": "Builder Company",  "image": "certificate.png" },
+    { "title": "Best-Design", "subtitle": "Projects", "image": "design.png" },
+    { "title": "Quality", "subtitle": "Assurance", "image": "service.png" },
+    { "title": "On-Time", "subtitle": "Delivery", "image": "time.png" }
+  ]
+},
+  "about": {
+    "heading": "Oak City Developments",
+    "body": "OakCity Developments is a registered Ontario builder specializing in residential and commercial construction. Based in Oakville, our team brings years of combined expertise in planning, design, and project management — from concept to completion.,We are fully certified under Tarion and the Home Construction Regulatory Authority (HCRA), ensuring every project meets the highest provincial standards for safety and quality. Our philosophy is simple: Build better, build smarter, and build to last.",
+    "image": "assets/images/Projects/23.webp"
+  },
+  "projects": [
+    {
+      "title": "The Jefferson’s Lake House",
+      "location": "Lakeview",
+      "featured": true,
+      "images": [
+        { "src": "assets/images/Projects/15.jpg" },
+        { "src": "assets/images/Projects/2a.jpg" },
+        { "src": "assets/images/Projects/5.jpg" },
+        { "src": "assets/images/Projects/5.jpg" }
+        
+      ]
+    },
+    {
+      "title": "Oakview Ashbury",
+      "location": "Midtown",
+      "images": [{ "src": "assets/images/Projects/12.jpg" }]
+    },
+    {
+      "title": "Downtown Loft Bath",
+      "location": "City Center",
+      "images": [{ "src": "assets/images/Projects/10.jpg" }]
+    },
+    {
+      "title": "Downtown Loft Bath",
+      "location": "City Center",
+      "images": [{ "src": "assets/images/Projects/21.webp" }]
+    }
+  ],
+  "testimonials": [
+    { "quote": "Custom Home Renovation: The OakCity team delivered exceptional quality and attention to detail. They kept us informed every step of the way and completed on schedule — highly recommended!",
+  "author": "Samantha Patel" },
+    { "quote": "Office Remodeling Project: Professional, reliable, and transparent from start to finish. OakCity made the entire process stress-free and exceeded our expectations with their craftsmanship.",
+  "author": "David Miller" },
+    {"quote": "Steamoji Academy- Commercial fit out: Excellent workmanship,trust and transparency throughout the whole project! Oakcity understand how to execute from A--Z.", "author":"Larry Zhang" }
+  ],
+  "contact": {
+    "address": "191 Lakeshore E, Oakville L6J 1H5",
+    "email": "info@oakcitydevelopments.com",
+    "phone": "416-888-9387"
+  },
+  
+  "certifications": [
+  {
+    "name": "Home Construction Regulatory Authority (HCRA)",
+    "logo": "assets/images/logo/hcra.png",
+    "url": "https://www.hcraontario.ca/"
+  },
+  {
+    "name": "Ontario Home Builders’ Association (OHBA / CHBA)",
+    "logo": "assets/images/logo/ohba.png",
+    "url": "https://www.ohba.ca/"
+  }
+  ],
+  "socials": [
+  { "name": "phone",    "url": "tel:123-456-7890" },
+  { "name": "email",    "url": "mailto:info@oakcitydevelopments.com" },
+  { "name": "instagram","url": "https://www.instagram.com/oakcity_developments/?igsh=dmlqaGVtZ2RrOGQy#" },
+  { "name": "tiktok",   "url": "https://www.tiktok.com/@yourhandle" },
+  { "name": "facebook", "url": "https://www.facebook.com/people/Oakcity-Developments/pfbid0ThbyErRLDpZceM1ke59b1SUzWTkVG5dpoFXWUZRePweysnbh8BS9NGbtmC9LXBVMl/?rdid=6WfDL03JNxxvlXQX&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AXFaa8maa%2F" }
+]
+}

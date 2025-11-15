@@ -4,9 +4,12 @@ import { Injectable, computed, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SiteContent } from '../models/site-content';
 import { catchError, of, switchMap } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class ContentService {
+  private url =environment.url;
+  
 
   /**
    * Private signal that holds the full content.json data.

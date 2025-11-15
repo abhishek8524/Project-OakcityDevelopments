@@ -1,40 +1,67 @@
-<section id="services" class="section services" *ngIf="services() as s">
+<!-- src/app/features/ourservices/ourservices.component.html -->
+
+<section
+  id="services"
+  class="section services"
+  *ngIf="services() as s"
+>
   <div class="container">
     <h2 class="section-title">Our Services</h2>
+
+    <!-- Intro paragraph under the title -->
     <p class="muted center">
       OakCity Developments specializes in building luxury homes and commercial units from the ground up.
       We manage every phase — from design to delivery — ensuring unmatched quality and craftsmanship.
     </p>
 
-    <!-- Service Items -->
+    <!-- ===== SERVICE CARDS GRID ===== -->
     <div class="grid service-list">
-      <article class="service-card" *ngFor="let item of s.items; let i = index; trackBy: trackByIndex">
+      <article
+        class="service-card"
+        *ngFor="let item of s.items; let i = index; trackBy: trackByIndex"
+      >
+        <!-- Logo / icon area -->
         <div class="logo-wrap" aria-hidden="true">
           <img
             [src]="imgFor(item)"
             [alt]="item.title + ' logo'"
             class="logo"
-            width="72" height="72"
+            width="72"
+            height="72"
             decoding="async"
             loading="lazy"
             (error)="onImgError($event)"
           />
         </div>
 
+        <!-- Service title + description -->
         <h3>{{ item.title }}</h3>
-        <p>{{ item.description || 'We provide top-tier building services with full transparency and durability.' }}</p>
-        <a href="#contact" class="btn small">{{ s.ctaLabel || 'Contact us' }}</a>
+        <p>
+          {{
+            item.description
+              || 'We provide top-tier building services with full transparency and durability.'
+          }}
+        </p>
+
+        <!-- CTA button, label comes from JSON (fallback to "Contact us") -->
+        <a href="#contact" class="btn small">
+          {{ s.ctaLabel || 'Contact us' }}
+        </a>
       </article>
     </div>
 
-    <!-- Value Props -->
+    <!-- ===== VALUE PROPS ROW ("Why choose us") ===== -->
     <div class="value-props" *ngIf="s.valueProps?.length">
-      <div class="prop" *ngFor="let p of s.valueProps; let i = index; trackBy: trackByIndex">
+      <div
+        class="prop"
+        *ngFor="let p of s.valueProps; let i = index; trackBy: trackByIndex"
+      >
         <img
           [src]="propImgFor(p)"
           [alt]="p.title + ' icon'"
           class="prop-logo"
-          width="40" height="40"
+          width="40"
+          height="40"
           decoding="async"
           loading="lazy"
           (error)="onImgError($event)"

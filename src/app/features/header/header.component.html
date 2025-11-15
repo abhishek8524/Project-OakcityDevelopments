@@ -1,19 +1,30 @@
+<!-- src/app/features/header/header.component.html -->
+
 <header class="header">
   <div class="container flex">
+    <!-- Brand logo -->
     <div class="brand">
-      <img src="assets/images/logo/OakCityLogopng.png" alt="OakCity Developments logo" class="logo">
+      <img
+        src="assets/images/logo/OakCityLogopng.png"
+        alt="OakCity Developments logo"
+        class="logo"
+      />
     </div>
 
-    <nav class="nav">
+    <!-- Simple navigation links scrolling to sections on the page -->
+    <nav class="nav" aria-label="Primary">
       <a href="#home">Home</a>
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-   <!-- ...your existing brand/nav... -->
 
-<a class="btn call" [attr.href]="'tel:' + (content.content()?.contact?.phone || '')">CALL NOW</a>
-
-
+    <!-- Call-to-action button (pulls phone number from content.json) -->
+    <a
+      class="btn call"
+      [attr.href]="'tel:' + (content.content()?.contact?.phone || '')"
+    >
+      CALL NOW
+    </a>
   </div>
 </header>

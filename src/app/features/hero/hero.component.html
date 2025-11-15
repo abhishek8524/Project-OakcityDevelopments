@@ -1,6 +1,29 @@
 <!-- src/app/features/hero/hero.component.html -->
+
+<!--
+  Hero section at the top of the page.
+  *ngIf="vm()" ensures the template only renders
+  once the content has been loaded from ContentService.
+-->
 <section id="home" class="hero" *ngIf="vm()">
-  <img [ngSrc]="vm()!.image" width="1920" height="900" priority alt="Hero" />
+  <!--
+    ngSrc comes from NgOptimizedImage (Angular's image directive).
+    vm()!.image is the hero image URL from content.json.
+    priority tells Angular this is a high-priority image (LCP).
+  -->
+  <img
+    [ngSrc]="vm()!.image"
+    width="1920"
+    height="900"
+    priority
+    alt="Hero"
+  />
+
+  <!--
+    Overlay on top of the image.
+    Right now the text is commented out – you can enable it
+    once your content.json has title/subtitle values.
+  -->
   <div class="overlay">
     <!-- <h1>{{ vm()!.title }}</h1> -->
     <!-- <p class="sub">{{ vm()!.subtitle }}</p> -->

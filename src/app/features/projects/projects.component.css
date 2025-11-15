@@ -1,32 +1,133 @@
-/* Featured */
-.head{display:flex; align-items:center; justify-content:space-between; margin-bottom:16px}
-.arrows{display:flex; gap:8px}
-.btn.sm{padding:.45rem .75rem; font-size:.9rem}
-.frame{border:1px solid #2a2a2a; background:var(--surface); padding:16px; margin-bottom:28px}
-.feat-card{display:grid; gap:16px}
-.feat-images{display:grid; grid-template-columns:2fr 1fr; gap:12px}
-.feat-images img{width:100%; display:block; height:220px; object-fit:cover}
-.feat-meta h3{margin:0 0 4px}
-@media (max-width:900px){
-  .feat-images{grid-template-columns:1fr}
-  .feat-images img{height:200px}
+/* src/app/features/projects/projects.component.css */
+
+/* Featured header row */
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
 }
 
-/* Masonry grid using CSS columns for a simple masonry effect */
-.masonry{
-  column-count:3;
-  column-gap:16px;
+/* Arrow button row */
+.arrows {
+  display: flex;
+  gap: 8px;
 }
-@media (max-width:1100px){ .masonry{column-count:2} }
-@media (max-width:700px){ .masonry{column-count:1} }
 
-.card{
+/* Small arrow buttons */
+.btn.sm {
+  padding: 0.45rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* Featured frame */
+.frame {
+  border: 1px solid #2a2a2a;
+  background: var(--surface);
+  padding: 16px;
+  margin-bottom: 28px;
+}
+
+/* Featured card layout */
+.feat-card {
+  display: grid;
+  gap: 16px;
+}
+
+/* Featured images grid */
+.feat-images {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+}
+
+.feat-images img {
+  width: 100%;
+  display: block;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Featured meta text */
+.feat-meta h3 {
+  margin: 0 0 4px;
+}
+
+/* Responsive for featured section */
+@media (max-width: 900px) {
+  .feat-images {
+    grid-template-columns: 1fr;
+  }
+
+  .feat-images img {
+    height: 200px;
+  }
+
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .head {
+    align-items: center;
+    text-align: center;
+  }
+
+  .arrows {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .frame {
+    padding: 12px;
+  }
+
+  .feat-images img {
+    height: 180px;
+  }
+}
+
+/* Masonry grid using CSS columns */
+.masonry {
+  column-count: 3;
+  column-gap: 16px;
+}
+
+@media (max-width: 1100px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .masonry {
+    column-count: 1;
+  }
+}
+
+/* Individual project card */
+.card {
   break-inside: avoid;
-  background:var(--surface);
-  border:1px solid #2a2a2a;
+  background: var(--surface);
+  border: 1px solid #2a2a2a;
   margin: 0 0 16px;
-  display:block;
+  display: block;
 }
-.card img{width:100%; height:auto; display:block; object-fit:cover}
-.card .meta{padding:12px}
-.title{font-weight:600}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.card .meta {
+  padding: 12px;
+}
+
+.title {
+  font-weight: 600;
+}

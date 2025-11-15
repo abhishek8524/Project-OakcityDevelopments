@@ -13,7 +13,7 @@
   "services": {
   "ctaLabel": "Request a Quote",
   "items": [
-    { "title": "Residential Construction", "description": "Complete home construction from design to final hand-over.", "image": "house.png" },
+    
     { "title": "Custom Home Builds", "description": "Tailor-made houses built from scratch to match your vision and lifestyle.", "image": "apartments.png" },
     { "title": "Commercial Units", "description": "We build offices, plazas, and mixed-use spaces that stand the test of time.","image": "shop.png"},
     { "title": "Project Management", "description": "End-to-end planning, scheduling, and site supervision for seamless delivery.","image": "management.png" }
@@ -32,31 +32,41 @@
   },
   "projects": [
     {
-      "title": "The Jefferson’s Lake House",
-      "location": "Lakeview",
+      "location": "Ashbury Rd",
       "featured": true,
       "images": [
         { "src": "assets/images/Projects/15.jpg" },
         { "src": "assets/images/Projects/2a.jpg" },
-        { "src": "assets/images/Projects/5.jpg" },
-        { "src": "assets/images/Projects/5.jpg" }
+        { "src": "assets/images/Projects/Const2.jpg" },
+        { "src": "assets/images/Projects/Const3.jpg" }
         
       ]
     },
     {
-      "title": "Oakview Ashbury",
+      
       "location": "Midtown",
-      "images": [{ "src": "assets/images/Projects/12.jpg" }]
+      "images": [
+                 { "src": "assets/images/Projects/Const4.jpg" } ]
     },
     {
-      "title": "Downtown Loft Bath",
       "location": "City Center",
-      "images": [{ "src": "assets/images/Projects/10.jpg" }]
+      "images": [{ "src": "assets/images/Projects/Const5.jpg" }]
     },
     {
-      "title": "Downtown Loft Bath",
-      "location": "City Center",
-      "images": [{ "src": "assets/images/Projects/21.webp" }]
+      "location": "South Oakville",
+      "images": [{ "src": "assets/images/Projects/Const6.jpg" }]
+    },    
+    {
+      "location": "South Oakville",
+      "images": [{ "src": "assets/images/Projects/Const7.jpg" }]
+    },
+    {
+      "location": "South Oakville",
+      "images": [{ "src": "assets/images/Projects/Const8.jpg" }]
+    },
+    {
+      "location": "South Oakville",
+      "images": [{ "src": "assets/images/Projects/Const9.jpg" }]
     }
   ],
   "testimonials": [
@@ -73,6 +83,11 @@
   },
   
   "certifications": [
+    {
+    "name": "Ontario Home Builders’ Association (OHBA / CHBA)",
+    "logo": "assets/images/logo/multi-logo.png",
+    "url": "https://www.ohba.ca/"
+  },
   {
     "name": "Home Construction Regulatory Authority (HCRA)",
     "logo": "assets/images/logo/hcra.png",
@@ -80,9 +95,15 @@
   },
   {
     "name": "Ontario Home Builders’ Association (OHBA / CHBA)",
+    "logo": "assets/images/logo/Licenced.png",
+    "url": "https://www.ohba.ca/"
+  },
+  {
+    "name": "Ontario Home Builders’ Association (OHBA / CHBA)",
     "logo": "assets/images/logo/ohba.png",
     "url": "https://www.ohba.ca/"
   }
+
   ],
   "socials": [
   { "name": "phone",    "url": "tel:123-456-7890" },

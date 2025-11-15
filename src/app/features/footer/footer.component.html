@@ -1,6 +1,8 @@
+<!-- src/app/features/footer/footer.component.html -->
+
 <footer class="footer">
   <div class="container grid">
-    <!-- Brand -->
+    <!-- Column 1: Brand / tagline -->
     <div class="brand">
       <img
         src="assets/images/logo/OakCityLogopng.png"
@@ -13,28 +15,43 @@
       <p class="muted">Building with quality &amp; integrity.</p>
     </div>
 
-    <!-- Explore -->
+    <!-- Column 2: Explore links -->
     <nav class="links links-col" aria-label="Explore">
       <div class="mini-head">Explore</div>
-      <a href="#about"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> About</a>
-      <a href="#services"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Our Services</a>
-      <a href="#projects"><i class="fa-solid fa-photo-film" aria-hidden="true"></i> Portfolio</a>
-      <a href="#testimonials"><i class="fa-solid fa-comments" aria-hidden="true"></i> Testimonials</a>
-      <a href="#contact"><i class="fa-solid fa-message" aria-hidden="true"></i> Get a Quote</a>
+      <a href="#about">
+        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        About
+      </a>
+      <a href="#services">
+        <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+        Our Services
+      </a>
+      <a href="#projects">
+        <i class="fa-solid fa-photo-film" aria-hidden="true"></i>
+        Portfolio
+      </a>
+      <a href="#testimonials">
+        <i class="fa-solid fa-comments" aria-hidden="true"></i>
+        Testimonials
+      </a>
+      <a href="#contact">
+        <i class="fa-solid fa-message" aria-hidden="true"></i>
+        Get a Quote
+      </a>
     </nav>
 
-    <!-- Contact / Social -->
+    <!-- Column 3: Contact details & social icons -->
     <div class="contact-col" *ngIf="info() as c">
       <div class="mini-head">Get in touch</div>
 
       <ul class="contact-list">
         <li>
           <i class="fa-solid fa-phone" aria-hidden="true"></i>
-          <a [href]="'tel:'+c.phone">{{ c.phone }}</a>
+          <a [href]="'tel:' + c.phone">{{ c.phone }}</a>
         </li>
         <li>
           <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-          <a [href]="'mailto:'+c.email">{{ c.email }}</a>
+          <a [href]="'mailto:' + c.email">{{ c.email }}</a>
         </li>
         <li>
           <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
@@ -42,33 +59,38 @@
         </li>
       </ul>
 
+      <!-- Social icons (driven from content.json -> socials[]) -->
       <div class="social" *ngIf="socials().length" aria-label="Social links">
-        <a *ngFor="let s of socials()"
-           class="social-btn"
-           [ngClass]="s.name.toLowerCase()"
-           [href]="s.url"
-           target="_blank"
-           rel="noopener"
-           [attr.aria-label]="s.name">
+        <a
+          *ngFor="let s of socials()"
+          class="social-btn"
+          [ngClass]="s.name.toLowerCase()"
+          [href]="s.url"
+          target="_blank"
+          rel="noopener"
+          [attr.aria-label]="s.name"
+        >
           <i [class]="getFaIcon(s.name)"></i>
         </a>
       </div>
 
-      <button class="to-top" type="button" (click)="scrollTop()" aria-label="Back to top">
-        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Top
+      <!-- Back to top smooth scroll -->
+      <button
+        class="to-top"
+        type="button"
+        (click)="scrollTop()"
+        aria-label="Back to top"
+      >
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        Top
       </button>
     </div>
   </div>
 
+  <!-- Bottom copyright bar -->
   <div class="copy">
     <div class="container">
       © {{ year }} OakCity Developments — All Rights Reserved.
-      <span class="muted small">
-        Designed &amp; built by
-        <a href="https://www.linkedin.com/in/abhishek8524/" target="_blank" class="author">
-          Abhishek Chauhan
-        </a>
-      </span>
     </div>
   </div>
 </footer>

@@ -1,7 +1,51 @@
-h2{margin-bottom:16px}
-.t-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-.t-card{background:var(--surface); border:1px solid #2a2a2a; padding:20px}
-.q{line-height:1.8; margin:0 0 8px}
-.a{color:var(--muted); font-size:.95rem}
-@media (max-width:950px){ .t-grid{grid-template-columns:repeat(2,1fr)} }
-@media (max-width:620px){ .t-grid{grid-template-columns:1fr} }
+/* src/app/features/testimonials/testimonials.component.css */
+
+h2 {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+/* Grid of testimonials */
+.t-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Testimonial card */
+.t-card {
+  background: var(--surface);
+  border: 1px solid #2a2a2a;
+  padding: 20px;
+}
+
+.q {
+  line-height: 1.8;
+  margin: 0 0 8px;
+}
+
+.a {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Breakpoints */
+@media (max-width: 950px) {
+  .t-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  h2 {
+    text-align: center;
+  }
+
+  .t-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .t-card {
+    padding: 16px;
+  }
+}

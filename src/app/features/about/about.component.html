@@ -1,12 +1,18 @@
+<!-- src/app/features/about/about.component.html -->
+
 <section id="about" class="section">
+  <!-- vm() returns the "about" content from SiteContent -->
   <div class="container about" *ngIf="vm() as x">
+    <!-- Text column -->
     <div class="copy">
       <h2>{{ x.heading }}</h2>
       <p class="muted">{{ x.body }}</p>
       <a href="#projects" class="btn">See Recent Work</a>
     </div>
+
+    <!-- Image column -->
     <div class="imgwrap">
-      <img [src]="x.image" alt="About image">
+      <img [src]="x.image" alt="About image" />
     </div>
   </div>
 </section>

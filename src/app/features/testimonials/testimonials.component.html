@@ -1,6 +1,10 @@
+<!-- src/app/features/testimonials/testimonials.component.html -->
+
 <section id="testimonials" class="section">
   <div class="container">
     <h2>What Clients Say</h2>
+
+    <!-- Only show grid if we have at least one testimonial -->
     <div class="t-grid" *ngIf="list()?.length">
       <div class="t-card" *ngFor="let t of list()">
         <p class="q">“{{ t.quote }}”</p>

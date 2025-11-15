@@ -1,6 +1,64 @@
-.about{display:grid; grid-template-columns:1.1fr 1fr; gap:40px; align-items:center}
-.copy h2{font-size:2.2rem; margin-bottom:12px}
-.copy p{line-height:1.8; margin-bottom:18px}
-.imgwrap{border:1px solid #2a2a2a; background:var(--surface); padding:12px}
-.imgwrap img{width:100%; height:auto; display:block; object-fit:cover}
-@media (max-width:1000px){ .about{grid-template-columns:1fr} }
+/* src/app/features/about/about.component.css */
+
+.about {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.copy h2 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.copy p {
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.imgwrap {
+  border: 1px solid #2a2a2a;
+  background: var(--surface);
+  padding: 12px;
+}
+
+.imgwrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .copy h2 {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .about {
+    gap: 18px;
+  }
+
+  .copy h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .copy p {
+    text-align: center;
+  }
+
+  .imgwrap {
+    padding: 8px;
+  }
+}

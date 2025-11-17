@@ -47,7 +47,7 @@
 
   "projects": [
     {
-      "location": "Ashbury Rd",
+      "location": "Bronte",
       "featured": true,
       "images": [
         { "src": "assets/images/Projects/15.jpg" },
@@ -57,19 +57,19 @@
       ]
     },
     {
-      "location": "Midtown",
+      "location": "Wildwood Drive",
       "images": [
         { "src": "assets/images/Projects/Const4.jpg" }
       ]
     },
     {
-      "location": "City Center",
+      "location": "Pine Grove",
       "images": [
         { "src": "assets/images/Projects/Const5.jpg" }
       ]
     },
     {
-      "location": "South Oakville",
+      "location": "Ashbury",
       "images": [
         { "src": "assets/images/Projects/Const6.jpg" }
       ]

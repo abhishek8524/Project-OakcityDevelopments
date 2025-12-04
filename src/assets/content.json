@@ -47,19 +47,15 @@
 
   "projects": [
     {
-      "location": "Bronte",
-      "featured": true,
-      "images": [
-        { "src": "assets/images/Projects/27.jpg" },
-        { "src": "assets/images/Projects/2a.jpg" },
-        { "src": "assets/images/Projects/Const2.jpg" },
-        { "src": "assets/images/Projects/Const3.jpg" }
-      ]
-    },
-    {
       "location": "Wildwood Drive",
       "images": [
         { "src": "assets/images/Projects/25.jpg" }
+      ]
+    },
+     {
+      "location": "South West Oakville",
+      "images": [
+        { "src": "assets/images/Projects/Const8.jpg" }
       ]
     },
     {
@@ -81,9 +77,9 @@
       ]
     },
     {
-      "location": "South West Oakville",
+      "location": "Bronte",
       "images": [
-        { "src": "assets/images/Projects/Const8.jpg" }
+         { "src": "assets/images/Projects/27.jpg" }
       ]
     },
     {

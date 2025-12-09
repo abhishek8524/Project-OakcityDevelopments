@@ -49,6 +49,22 @@
     {
       "location": "Wildwood Drive",
       "images": [
+        { "src": "assets/images/Projects/43.JPEG" }
+      ]
+    },
+    {
+      "location": "Wildwood Drive",
+      "featured": true,
+      "images": [
+       
+        { "src": "assets/images/Projects/44.JPEG" }
+      ]
+    },
+    
+    
+    {
+      "location": "Wildwood Drive",
+      "images": [
         { "src": "assets/images/Projects/25.jpg" }
       ]
     },
@@ -56,6 +72,19 @@
       "location": "South West Oakville",
       "images": [
         { "src": "assets/images/Projects/Const8.jpg" }
+      ]
+    },
+     {
+      "location": "Weighton Drive",
+      "images": [
+        { "src": "assets/images/Projects/41.JPEG" }
+      ]
+    },
+    {
+      "location": "Weighton Drive",
+      "featured": true,
+      "images": [
+        { "src": "assets/images/Projects/42.JPEG" }
       ]
     },
     {
@@ -68,6 +97,13 @@
       "location": "Ashbury",
       "images": [
         { "src": "assets/images/Projects/Const6.jpg" }
+      ]
+    },
+    {
+      "location": "Jeanette Drive",
+      "featured": true,
+      "images": [
+        { "src": "assets/images/Projects/40.jpeg" }
       ]
     },
     {

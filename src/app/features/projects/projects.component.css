@@ -1,76 +1,148 @@
 /* src/app/features/projects/projects.component.css */
 
+/* ===== FEATURED PROJECTS SECTION ===== */
+
+.featured {
+  margin-bottom: 3rem;
+}
+
 /* Featured header row */
 .head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.head h2 {
+  margin: 0;
 }
 
 /* Arrow button row */
 .arrows {
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 /* Small arrow buttons */
 .btn.sm {
-  padding: 0.45rem 0.75rem;
+  padding: 0.4rem 0.85rem;
   font-size: 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
+}
+
+.btn.sm:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn.sm:active {
+  transform: translateY(0);
 }
 
 /* Featured frame */
 .frame {
-  border: 1px solid #2a2a2a;
-  background: var(--surface);
-  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 20px;
   margin-bottom: 28px;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
 }
 
 /* Featured card layout */
 .feat-card {
   display: grid;
-  gap: 16px;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 20px;
+  align-items: stretch;
 }
 
 /* Featured images grid */
 .feat-images {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 12px;
+  grid-auto-rows: minmax(120px, 1fr);
+  gap: 10px;
 }
 
 .feat-images img {
   width: 100%;
+  height: 230px;
+  border-radius: 14px;
   display: block;
-  height: 220px;
   object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Make the first image dominant when multiple exist */
+.feat-images img:first-child {
+  grid-row: 1 / span 2;
+  height: 100%;
 }
 
 /* Featured meta text */
-.feat-meta h3 {
-  margin: 0 0 4px;
+.feat-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
 }
 
-/* Responsive for featured section */
+.feat-meta h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.feat-meta .muted {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* ===== Responsive for featured section ===== */
+
 @media (max-width: 900px) {
-  .feat-images {
+  .feat-card {
     grid-template-columns: 1fr;
   }
 
-  .feat-images img {
+  .feat-images {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+  }
+
+  .feat-images img,
+  .feat-images img:first-child {
+    grid-row: auto;
     height: 200px;
+  }
+
+  .frame {
+    padding: 16px;
   }
 
   .head {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
   }
 }
 
 @media (max-width: 600px) {
+  .featured {
+    margin-bottom: 2.25rem;
+  }
+
   .head {
     align-items: center;
     text-align: center;
@@ -82,13 +154,15 @@
   }
 
   .frame {
-    padding: 12px;
+    padding: 14px;
   }
 
   .feat-images img {
     height: 180px;
   }
 }
+
+/* ===== MASONRY GRID (ALL PROJECTS) ===== */
 
 /* Masonry grid using CSS columns */
 .masonry {
@@ -115,6 +189,7 @@
   border: 1px solid #2a2a2a;
   margin: 0 0 16px;
   display: block;
+  overflow: hidden;
 }
 
 .card img {
@@ -130,4 +205,56 @@
 
 .title {
   font-weight: 600;
+}
+
+/* ===== MULTI-PHOTO CARD VARIANT ===== */
+
+.multi-photo {
+  overflow: hidden;
+}
+
+/* Grid for thumbs inside card */
+.multi-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-auto-rows: 120px;
+  gap: 6px;
+  padding: 6px;
+}
+
+/* Base image style */
+.multi-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Make the first image bigger / hero */
+.multi-grid img.main {
+  grid-row: 1 / span 2;
+}
+
+/* Extra overlay when more than 3 images */
+.more-badge {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+/* Responsive tweaks for multi-photo */
+@media (max-width: 700px) {
+  .multi-grid {
+    grid-template-columns: 1.5fr 1fr;
+    grid-auto-rows: 100px;
+  }
 }

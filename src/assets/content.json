@@ -46,86 +46,116 @@
   },
 
   "projects": [
-    {
-      "location": "Wildwood Drive",
-      "images": [
-        { "src": "assets/images/Projects/43.JPEG" }
-      ]
-    },
-    {
-      "location": "Wildwood Drive",
-      "featured": true,
-      "images": [
-       
-        { "src": "assets/images/Projects/44.JPEG" }
-      ]
-    },
+  {
+    "location": "Wildwood Drive",
+    "segment": "residential",
+    "featured": true,
+    "images": [
+      { "src": "assets/images/Projects/43.JPEG" }
+    ]
+  },
+  {
+    "location": "Wildwood Drive",
     
+    "segment": "residential",
+    "images": [
+      { "src": "assets/images/Projects/44.JPEG" }
+    ]
+  },
+  {
+    "location": "Weighton Drive",
+    "segment": "residential",
+    "images": [
+      { "src": "assets/images/Projects/25.jpg" }
+    ]
+  },
+  {
+    "location": "South West Oakville",
+    "segment": "residential",
+    "images": [
+      { "src": "assets/images/Projects/Const8.jpg" }
+    ]
+  },
+  {
+    "location": "Weighton Drive",
+    "segment": "residential",
+    "images": [
+      { "src": "assets/images/Projects/41.JPEG" }
+    ]
+  },
+  {
+    "location": "Weighton Drive",
+    "featured": true,
+    "segment": "residential",
+    "images": [
+      { "src": "assets/images/Projects/42.JPEG" }
+    ]
+  },
+  {
+    "location": "Pine Grove",
+    "segment": "residential",
+    "images": [
+      { "src": "assets/images/Projects/26.jpg" }
+    ]
+  },
+  {
+    "location": "Ashbury",
+    "segment": "residential",
+    "images": [
+      { "src": "assets/images/Projects/Const6.jpg" }
+    ]
+  },
+  {
+    "location": "Jeanette Drive",
+    "featured": true,
+    "segment": "residential",
+    "images": [
+      { "src": "assets/images/Projects/40.jpeg" }
+    ]
+  },
+  {
+    "location": "South West Oakville",
+    "segment": "residential",
+    "images": [
+      { "src": "assets/images/Projects/Const7.JPEG" }
+    ]
+  },
+  {
+    "location": "Bronte",
+    "segment": "residential",
+    "images": [
+      { "src": "assets/images/Projects/27.jpg" }
+    ]
+  },
+  {
+    "location": "South West Oakville",
+    "segment": "residential",
+    "images": [
+      { "src": "assets/images/Projects/Const9.jpg" }
+    ]
+  },
+  { "title": "Burlington Ontario",
     
-    {
-      "location": "Wildwood Drive",
-      "images": [
-        { "src": "assets/images/Projects/25.jpg" }
-      ]
-    },
-     {
-      "location": "South West Oakville",
-      "images": [
-        { "src": "assets/images/Projects/Const8.jpg" }
-      ]
-    },
-     {
-      "location": "Weighton Drive",
-      "images": [
-        { "src": "assets/images/Projects/41.JPEG" }
-      ]
-    },
-    {
-      "location": "Weighton Drive",
-      "featured": true,
-      "images": [
-        { "src": "assets/images/Projects/42.JPEG" }
-      ]
-    },
-    {
-      "location": "Pine Grove",
-      "images": [
-        { "src": "assets/images/Projects/26.jpg" }
-      ]
-    },
-    {
-      "location": "Ashbury",
-      "images": [
-        { "src": "assets/images/Projects/Const6.jpg" }
-      ]
-    },
-    {
-      "location": "Jeanette Drive",
-      "featured": true,
-      "images": [
-        { "src": "assets/images/Projects/40.jpeg" }
-      ]
-    },
-    {
-      "location": "South West Oakville",
-      "images": [
-        { "src": "assets/images/Projects/Const7.jpg" }
-      ]
-    },
-    {
-      "location": "Bronte",
-      "images": [
-         { "src": "assets/images/Projects/27.jpg" }
-      ]
-    },
-    {
-      "location": "South West Oakville",
-      "images": [
-        { "src": "assets/images/Projects/Const9.jpg" }
-      ]
-    }
-  ],
-
+    "featured": true,
+    "segment": "commercial",
+    "images": [
+      { "src": "assets/images/Projects/comm/1.JPEG" }
+    ]
+  },
+{    
+    "segment": "commercial",
+    "images": [
+      { "src": "assets/images/Projects/comm/2.JPEG" }
+    ]
+  },
+  {
+    
+    "segment": "commercial",
+    "images": [
+      { "src": "assets/images/Projects/comm/3.JPEG" }
+    ]
+  }
+],
   "testimonials": [
     {
       "quote": "Custom Home Renovation: The OakCity team delivered exceptional quality and attention to detail. They kept us informed every step of the way and completed on schedule — highly recommended!",

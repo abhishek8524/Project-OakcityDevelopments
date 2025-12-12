@@ -61,11 +61,13 @@ export interface ProjectImage {
  * One project entry for the Projects section.
  */
 export interface Project {
-  title: string;            // Project name
+  title?: string;           // Project name (optional because your JSON omits it)
   location?: string;        // Optional location (e.g., "Oakville, ON")
   images: ProjectImage[];   // One or more images
   featured?: boolean;       // Flag to highlight certain projects
+  segment?: 'residential' | 'commercial';
 }
+
 
 // ===== TESTIMONIALS SECTION =====
 /**

@@ -15,14 +15,24 @@ export class ProjectsComponent {
   private cs = inject(ContentService);
 
   /** All projects from content.json (empty array if not yet loaded). */
-  projects = computed(() => this.cs.content()?.projects ?? []);
+  projects = computed<any[]>(() => this.cs.content()?.projects ?? []);
 
   /**
    * Only projects where `featured: true`.
    * Used for the top carousel section.
    */
   featured = computed(() =>
-    (this.projects() || []).filter((p) => !!p.featured)
+    this.projects().filter((p) => !!p.featured)
+  );
+
+  /** Residential projects (segment === 'residential'). */
+  residentialProjects = computed(() =>
+    this.projects().filter((p) => p.segment === 'residential')
+  );
+
+  /** Commercial projects (segment === 'commercial'). */
+  commercialProjects = computed(() =>
+    this.projects().filter((p) => p.segment === 'commercial')
   );
 
   /** Carousel index for featured array. */
@@ -30,17 +40,17 @@ export class ProjectsComponent {
 
   /** Move to next featured project. */
   next() {
-    if (this.featured().length) {
-      this.idx.set((this.idx() + 1) % this.featured().length);
+    const n = this.featured().length;
+    if (n) {
+      this.idx.set((this.idx() + 1) % n);
     }
   }
 
   /** Move to previous featured project. */
   prev() {
-    if (this.featured().length) {
-      this.idx.set(
-        (this.idx() - 1 + this.featured().length) % this.featured().length
-      );
+    const n = this.featured().length;
+    if (n) {
+      this.idx.set((this.idx() - 1 + n) % n);
     }
   }
 }
